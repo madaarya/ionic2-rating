@@ -17,14 +17,15 @@ export const RATING_CONTROL_VALUE_ACCESSOR: any = {
       display: inline;
       border: 0px;
       background: none;
-      padding: 5px 10px;
+      padding: 5px 0px;
     }
     ul.rating li i {
-      font-size: 30px;
+      font-size: 25px;
+      color: #FDD06F;
     }
   `],
   template: `
-    <ul class="rating" (keydown)="onKeyDown($event)">
+    <ul class="rating">
       <li *ngFor="let starIndex of starIndexes" tappable (click)="rate(starIndex + 1)">
         <ion-icon [name]="getStarIconName(starIndex)">
         </ion-icon>
